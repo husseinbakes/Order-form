@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Place an Order | Hussein Bakes</title>
+  <meta name="description" content="Custom cake order form for Hussein Bakes – handcrafted cakes for all occasions.">
+  <link rel="icon" href="images/logo.webp" type="image/webp" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
 
+  <header class="hero">
+    <div class="overlay">
+      <h1>Order Your Custom Cake</h1>
+      <p>Elegant. Delicious. Delivered.</p>
+    </div>
+  </header>
+
+  <main class="form-container">
+    <form id="cakeOrderForm">
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" required />
+
+      <label for="event">Event Type *</label>
+      <select id="event" required>
+        <option value="">Select event</option>
+        <option>Wedding</option>
+        <option>Birthday</option>
+        <option>Baby Shower</option>
+        <option>Graduation</option>
+        <option>Other</option>
+      </select>
+
+      <label for="date">Event Date *</label>
+      <input type="date" id="date" required />
+
+      <label for="cake">Cake Type *</label>
+      <select id="cake" required>
+        <option value="">Select cake type</option>
+        <option>Signature Cake</option>
+        <option>Specialty Cake</option>
+        <option>Celebration Cake</option>
+        <option>Wedding Cake</option>
+        <option>Mini Treats</option>
+      </select>
+
+      <label for="notes">Message / Design Request</label>
+      <textarea id="notes" rows="4" placeholder="Optional: write any special requests..."></textarea>
+
+      <button type="submit" class="order-btn">Send Order via WhatsApp</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Hussein Bakes. Kitui, Kenya.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
