@@ -1,1 +1,100 @@
+:root {
+  --black: #0a0a0a;
+  --gold: #ac9657;
+  --white: #ffffff;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+.hero {
+  background: url('../images/order-hero.webp') no-repeat center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  color: var(--gold);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Cinzel', serif;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  background-color: #1a1a1a;
+  color: var(--white);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.order-btn {
+  margin-top: 2rem;
+  width: 100%;
+  background-color: var(--gold);
+  color: var(--black);
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #d2b676;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #999;
+}
