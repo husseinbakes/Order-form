@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Place an Order | Hussein Bakes</title>
-  <meta name="description" content="Custom cake order form for Hussein Bakes – handcrafted cakes for all occasions.">
+  
+  <title>Place an Order | Hussein Bakes - Custom Cakes Nairobi & Kitui</title>
+  <meta name="description" content="Custom cake order form for Hussein Bakes – handcrafted cakes for weddings, birthdays, and all celebrations in Nairobi & Kitui.">
+  <meta name="author" content="Hussein Salim" />
+  <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/order.html" /> 
+
+  <meta property="og:title" content="Order Your Custom Cake | Hussein Bakes" />
+  <meta property="og:description" content="Use this form to start your custom cake order with Hussein Bakes today!" />
+  <meta property="og:url" content="https://husseinbakes.github.io/husseinbakes_website/order.html" />
+  <meta property="og:type" content="website" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="icon" href="images/logo.webp" type="image/webp" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
+  <link rel="stylesheet" href="css/styles.css" /> </head>
 <body>
+
+  <nav class="back-link">
+    <a href="index.html">&#8592; Back to Home</a>
+  </nav>
 
   <header class="hero">
     <div class="overlay">
@@ -18,17 +34,23 @@
   </header>
 
   <main class="form-container">
-    <form id="cakeOrderForm">
+    <p class="intro-text">Please fill out the form below. Your request will be sent directly to us on WhatsApp to finalize the details and pricing. **Minimum 3 days notice is required.**</p>
+    
+    <form id="cakeOrderForm" novalidate> 
       <label for="name">Your Name *</label>
-      <input type="text" id="name" required />
+      <input type="text" id="name" required placeholder="John Doe" />
+      
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" required placeholder="+254 7XX XXX XXX" />
 
       <label for="event">Event Type *</label>
       <select id="event" required>
-        <option value="">Select event</option>
+        <option value="" disabled selected>Select event</option>
         <option>Wedding</option>
         <option>Birthday</option>
         <option>Baby Shower</option>
         <option>Graduation</option>
+        <option>Corporate Event</option>
         <option>Other</option>
       </select>
 
@@ -37,25 +59,28 @@
 
       <label for="cake">Cake Type *</label>
       <select id="cake" required>
-        <option value="">Select cake type</option>
-        <option>Signature Cake</option>
-        <option>Specialty Cake</option>
-        <option>Celebration Cake</option>
-        <option>Wedding Cake</option>
-        <option>Mini Treats</option>
+        <option value="" disabled selected>Select cake type</option>
+        <option>Signature Cake (Standard Design)</option>
+        <option>Specialty Cake (Advanced Flavor)</option>
+        <option>Celebration Cake (Custom Design)</option>
+        <option>Wedding Cake (Tiered)</option>
+        <option>Mini Treats (Cupcakes, Bento)</option>
       </select>
+      
+      <label for="location">Delivery Location (Nairobi/Kitui) *</label>
+      <input type="text" id="location" required placeholder="e.g., Westlands, Nairobi or Central, Kitui" />
 
       <label for="notes">Message / Design Request</label>
-      <textarea id="notes" rows="4" placeholder="Optional: write any special requests..."></textarea>
+      <textarea id="notes" rows="4" placeholder="Describe your design vision, required servings, specific flavor, or any dietary needs."></textarea>
 
-      <button type="submit" class="order-btn">Send Order via WhatsApp</button>
+      <button type="submit" class="order-btn">Send Order Request via WhatsApp</button>
+      <p class="whatsapp-note">Your order details will be sent to **+254 710 975 805** on WhatsApp for confirmation.</p>
     </form>
   </main>
 
   <footer>
-    <p>© 2025 Hussein Bakes. Kitui, Kenya.</p>
+    <p>© 2025 Hussein Bakes. Kitui, Kenya. | <a href="index.html">Back to Home</a></p>
   </footer>
 
-  <script src="script.js"></script>
-</body>
+  <script src="js/script.js"></script> </body>
 </html>
