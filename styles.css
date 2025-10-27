@@ -8,10 +8,14 @@
 }
 
 /* Reset & Base Styles */
-* {
+*, *::before, *::after { /* Better universal box sizing */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Modern CSS touch */
 }
 
 body {
@@ -19,6 +23,9 @@ body {
   background-color: var(--black);
   color: var(--white);
   line-height: 1.6;
+  min-height: 100vh; /* Ensures footer is at the bottom */
+  display: flex; /* Setup for a modern sticky footer structure */
+  flex-direction: column;
 }
 
 /* Navigation for back link */
@@ -26,6 +33,7 @@ body {
   padding: 1rem 2rem 0;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%; /* Ensures it aligns properly */
 }
 .back-link a {
   color: var(--light-gray);
@@ -42,24 +50,26 @@ body {
 /* Assuming order-hero.webp exists in the parent images folder '../images/' */
 .hero { 
   background: url('../images/order-hero.webp') no-repeat center/cover;
-  height: 40vh; /* Slightly reduced height for better focus on the form */
+  height: 40vh; 
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  background-attachment: fixed; /* Improved effect on desktop */
 }
 
 .hero .overlay {
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.75); /* Darker overlay for better text contrast */
   text-align: center;
   padding: 2rem 3rem;
   border-radius: 8px;
   max-width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Added depth */
 }
 
 .hero h1 {
   color: var(--gold);
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsive sizing */
   margin-bottom: 0.5rem;
   font-family: 'Cinzel', serif;
 }
@@ -72,8 +82,9 @@ body {
 /* Form Container */
 .form-container {
   max-width: 600px;
-  margin: 2rem auto; /* Adjusted margin */
+  margin: 2rem auto; 
   padding: 0 1.5rem 3rem;
+  flex-grow: 1; /* Allows form content to push the footer down */
 }
 
 .intro-text {
@@ -102,18 +113,28 @@ textarea {
   width: 100%;
   padding: 0.9rem;
   border-radius: 6px;
-  border: 1px solid #333; /* Added subtle border for definition */
+  border: 1px solid #333; 
   font-size: 1rem;
   background-color: var(--dark-input);
   color: var(--white);
-  /* Added focused state */
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Improved Focus State */
 input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--gold);
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 8px rgba(172, 150, 87, 0.7); /* Subtle gold glow on focus */
+}
+
+/* Special styling for date field (important for mobile) */
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
 }
 
 textarea {
@@ -133,7 +154,7 @@ textarea {
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
 }
 
 .order-btn:hover {
@@ -154,6 +175,8 @@ footer {
   font-size: 0.85rem;
   color: #666;
   border-top: 1px solid #1c1c1c;
+  width: 100%;
+  margin-top: auto; /* Pushes footer to the bottom */
 }
 
 footer a {
@@ -163,6 +186,10 @@ footer a {
 
 /* Media Query for smaller screens */
 @media (max-width: 450px) {
+  .hero {
+      height: 35vh;
+      background-attachment: scroll; /* Disable parallax on small screens */
+  }
   .hero h1 {
     font-size: 1.8rem;
   }
