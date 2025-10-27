@@ -15,8 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://husseinbakes.github.io/husseinbakes_website/images/logo.webp" />
   
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:site" content="@husseinbakes"/> <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 
@@ -25,7 +24,7 @@
 </head>
 <body>
 
-  <nav class="back-link" aria-label="Main Navigation"> 
+  <nav class="back-link" aria-label="Main Navigation">
     <a href="index.html">&#8592; Back to Home</a>
   </nav>
 
@@ -60,6 +59,9 @@
       <label for="date">Event Date <span aria-hidden="true">*</span></label>
       <input type="date" id="date" name="date" required />
 
+      <label for="servings">Required Servings (Slices) <span aria-hidden="true">*</span></label>
+      <input type="number" id="servings" name="servings" required placeholder="e.g., 20, 30, or 50 slices" min="5" />
+
       <label for="cake">Cake Type <span aria-hidden="true">*</span></label>
       <select id="cake" name="cake" required>
         <option value="" disabled selected>Select cake type</option>
@@ -70,14 +72,21 @@
         <option value="Mini Treats">Mini Treats (Cupcakes, Bento)</option>
       </select>
       
-      <label for="location">Delivery Location (Nairobi/Kitui) <span aria-hidden="true">*</span></label>
-      <input type="text" id="location" name="location" required placeholder="Nairobi or Kitui Area (e.g., Westlands)" />
+      <label for="region">Delivery Region <span aria-hidden="true">*</span></label>
+      <select id="region" name="region" required>
+          <option value="" disabled selected>Select Kitui or Nairobi</option>
+          <option value="Kitui">Kitui County</option>
+          <option value="Nairobi">Nairobi Area</option>
+      </select>
 
-      <label for="notes">Message / Design Request (Serving Size & Details)</label>
-      <textarea id="notes" name="notes" rows="4" placeholder="Describe your design vision, required servings (e.g., 30 slices), specific flavor, or any dietary needs."></textarea>
+      <label for="location">Specific Delivery Location <span aria-hidden="true">*</span></label>
+      <input type="text" id="location" name="location" required placeholder="e.g., Westlands, Nairobi or Bondeni, Kitui" />
+
+      <label for="notes">Message / Design Request (Specific Details)</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Describe your design vision, specific flavor, color scheme, or any dietary needs."></textarea>
 
       <button type="submit" class="order-btn">Send Order Request via WhatsApp</button>
-      <p class="whatsapp-note" aria-live="polite">Your order details will be sent to **+254 710 975 805** on WhatsApp for confirmation.</p>
+      <p class="whatsapp-note" aria-live="polite">Your order details will be sent to **+254 710 975 805** on WhatsApp for confirmation. We usually respond within 2 hours.</p>
     </form>
   </main>
 
