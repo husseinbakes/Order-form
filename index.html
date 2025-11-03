@@ -4,23 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
-  <title>Place an Order | Hussein Bakes - Custom Cakes Kitui & Nairobi</title>
-  <meta name="description" content="Start your custom cake order with Hussein Bakes. Handcrafted, luxury cakes for weddings, birthdays, and events in Kitui and Nairobi. Minimum 3 days notice required."/>
+  <title>Order via WhatsApp | Hussein Bakes - Custom Cakes Kitui & Nairobi</title>
+  <meta name="description" content="Order your custom cake easily via WhatsApp. Hussein Bakes crafts luxury cakes for weddings, birthdays, and events in Kitui and Nairobi."/>
   <meta name="author" content="Hussein Salim" />
   <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/order.html" /> 
 
-  <meta property="og:title" content="Order Your Custom Cake | Hussein Bakes" />
-  <meta property="og:description" content="Use this form to start your custom cake order with Hussein Bakes today! Elegant. Delicious. Delivered." />
+  <!-- Open Graph (Social Preview) -->
+  <meta property="og:title" content="Order Custom Cakes | Hussein Bakes" />
+  <meta property="og:description" content="Chat directly with Hussein Bakes on WhatsApp to order handcrafted cakes for any occasion." />
   <meta property="og:url" content="https://husseinbakes.github.io/husseinbakes_website/order.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://husseinbakes.github.io/husseinbakes_website/images/logo.webp" />
   
+  <!-- Fonts & Favicon -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
-
   <link rel="icon" href="images/logo.webp" type="image/webp" />
-  <link rel="stylesheet" href="css/styles.css" /> 
+
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
@@ -36,63 +38,33 @@
   </header>
 
   <main class="form-container" role="main">
-    <p class="intro-text">Please fill out the form below. Your request will be sent directly to us on WhatsApp to finalize the details and pricing. **Minimum 3 days notice is required.**</p>
-    
-    <form id="cakeOrderForm" novalidate aria-live="polite"> 
-      <label for="name">Your Name <span aria-hidden="true">*</span></label>
-      <input type="text" id="name" name="name" required placeholder="John Doe" autocomplete="name" />
-      
-      <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
-      <input type="tel" id="phone" name="phone" required placeholder="+254 7XX XXX XXX" autocomplete="tel" pattern="^\+?254\s?7\d{8}$" title="Format: +254 7XXXXXXXX" />
+    <section class="intro-text">
+      <p>
+        Ready to bring your dream cake to life? 🍰  
+        Tap below to chat directly with us on WhatsApp.  
+        We’ll confirm your design, pricing, and pickup or delivery details.  
+        <strong>Minimum 3 days notice is required.</strong>
+      </p>
+    </section>
 
-      <label for="event">Event Type <span aria-hidden="true">*</span></label>
-      <select id="event" name="event" required>
-        <option value="" disabled selected>Select event</option>
-        <option value="Wedding">Wedding</option>
-        <option value="Birthday">Birthday</option>
-        <option value="Baby Shower">Baby Shower</option>
-        <option value="Graduation">Graduation</option>
-        <option value="Corporate Event">Corporate Event</option>
-        <option value="Other">Other</option>
-      </select>
+    <a 
+      href="https://wa.me/254710975805?text=Hi%20Hussein%20Bakes!%20I'd%20like%20to%20order%20a%20custom%20cake.%20Here%20are%20my%20details%3A%0A-%20Name%3A%20%0A-%20Event%20Type%3A%20%0A-%20Date%3A%20%0A-%20Cake%20Type%3A%20%0A-%20Servings%3A%20%0A-%20Location%3A%20%0A-%20Notes%3A%20" 
+      class="order-btn"
+      target="_blank"
+      rel="noopener">
+      📱 Place Order via WhatsApp
+    </a>
 
-      <label for="date">Event Date <span aria-hidden="true">*</span></label>
-      <input type="date" id="date" name="date" required />
-
-      <label for="servings">Required Servings (Slices) <span aria-hidden="true">*</span></label>
-      <input type="number" id="servings" name="servings" required placeholder="e.g., 20, 30, or 50 slices" min="5" />
-
-      <label for="cake">Cake Type <span aria-hidden="true">*</span></label>
-      <select id="cake" name="cake" required>
-        <option value="" disabled selected>Select cake type</option>
-        <option value="Signature Cake">Signature Cake (Standard Design)</option>
-        <option value="Specialty Cake">Specialty Cake (Advanced Flavor)</option>
-        <option value="Celebration Cake">Celebration Cake (Custom Design)</option>
-        <option value="Wedding Cake">Wedding Cake (Tiered)</option>
-        <option value="Mini Treats">Mini Treats (Cupcakes, Bento)</option>
-      </select>
-      
-      <label for="region">Delivery Region <span aria-hidden="true">*</span></label>
-      <select id="region" name="region" required>
-          <option value="" disabled selected>Select Kitui or Nairobi</option>
-          <option value="Kitui">Kitui County</option>
-          <option value="Nairobi">Nairobi Area</option>
-      </select>
-
-      <label for="location">Specific Delivery Location <span aria-hidden="true">*</span></label>
-      <input type="text" id="location" name="location" required placeholder="e.g., Westlands, Nairobi or Bondeni, Kitui" />
-
-      <label for="notes">Message / Design Request (Specific Details)</label>
-      <textarea id="notes" name="notes" rows="4" placeholder="Describe your design vision, specific flavor, color scheme, or any dietary needs."></textarea>
-
-      <button type="submit" class="order-btn">Send Order Request via WhatsApp</button>
-      <p class="whatsapp-note" aria-live="polite">Your order details will be sent to **+254 710 975 805** on WhatsApp for confirmation. We usually respond within 2 hours.</p>
-    </form>
+    <p class="whatsapp-note">
+      Your message will open directly in WhatsApp with our number  
+      <strong>+254 710 975 805</strong>. We usually reply within 2 hours.  
+      You can also send cake references or inspiration photos during the chat.
+    </p>
   </main>
 
   <footer role="contentinfo">
     <p>© <time datetime="2025">2025</time> Hussein Bakes. Kitui, Kenya. | <a href="index.html">Back to Home</a></p>
   </footer>
 
-  <script src="js/script.js" defer></script> </body>
+</body>
 </html>
